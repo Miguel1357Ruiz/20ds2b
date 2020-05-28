@@ -6,6 +6,6 @@ function pow(x, y){
 	return a;
 }
 
-print(pow(5, 4));
+console.log(pow(5, 4));
 
 
