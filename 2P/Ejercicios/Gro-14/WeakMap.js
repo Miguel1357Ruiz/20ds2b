@@ -1,24 +1,32 @@
-let Stack = (function () {
-const items= new WeakMap();
-class Stack {
- constructor () {
-item.set(this, []);
- }
- push(element){
- let s = items.get(this); //{3}
- s.push(element);
- }
- pop(){
- let s = items.get(this);
- let r = s.pop();
- return r;
- }
- //other methods
-}})();
-let weakMap=new WeakMap();
- weakMap.push(77);
- weakMap.push(1);
- console.log(weakMap.length);
- weakMap.pop();
- weakMap.push(8);
- console.log(weakMap);  
+class WeakMap {
+   constructor () {
+      this.items=[];
+   }
+
+   push(element){
+      this.items.push(element);
+   }
+
+   pop(){
+      let s = items.get(this); 
+      let r = s.pop();
+      return r;
+   }
+ 
+   size(){
+      return this.items.length;
+  }
+  
+  print(){
+   return this.items.toString();
+
+   }
+   
+}
+
+let stack = new WeakMap();
+stack.push(3);
+stack.push(1002);
+stack.push("marcus");
+console.log(stack.print());
+console.log(stack.size()); 
